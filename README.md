@@ -21,7 +21,8 @@ To run this app you will need to do the following:
 *** REQUIRED ***
 - Authentication: will return Bearer Token  
 **POST** http://localhost:5000/api/users/login  
-required params: username, password  
+required params: username, password  (seed file provides: "kittleb", "test1234")
+
 
 - Write new tweets  
 **POST** `http://localhost:5000/api/posts.json`  
