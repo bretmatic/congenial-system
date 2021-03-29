@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   	resources :users do
   		resources :posts
   	end
-  	resources :posts
+  	resources :posts do
+  		get "expanded" , to: "posts#expanded"
+  	end
   end
 
   root to: 'pages#home'
