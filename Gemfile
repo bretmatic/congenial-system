@@ -32,10 +32,7 @@ gem 'foreman'
 # Setup for creating a token based API
 gem 'bcrypt'
 gem 'jwt'
-gem 'grape'
-gem 'grape_on_rails_routes'
 gem 'rack-cors'
-gem 'grape-active_model_serializers'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

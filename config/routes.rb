@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  root to: 'pages#home'
+  namespace :api, defaults: {format: :json } do
+  	#resources :users
+  end
 
-  mount API::Base, at: "/"
+  root to: 'pages#home'
 
 end
