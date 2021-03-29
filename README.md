@@ -26,6 +26,7 @@ required params: username, password
 - Write new tweets  
 **POST** `http://localhost:5000/api/posts.json`  
 required params: message  
+optional params: private (Gotcha: currently if any value is passed into private, private will be set to true.  Don't pass this as a param to make a post public)  
 
 - Reply to existing tweets  
 **POST** `http://localhost:5000/api/posts.json`  
@@ -45,3 +46,6 @@ expected param format: `2025-06-03 16:57:45.608000 -04:00`
 - Query tweet and all responses  
 **GET** `http://localhost:5000/api/posts/:post_id/expanded.json`  
 **TODO:** JSON response structure should be better.  Currently this is using two queries and then dropping data into response. Would be better to use a serializer 
+
+***PROJECT TODO***
+- Basic framework for followers exists via the follow table and Active record associations in Users model, but functionality is incomplete

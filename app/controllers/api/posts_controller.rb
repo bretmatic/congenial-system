@@ -28,6 +28,9 @@ class API::PostsController < ApplicationController
 		if(params.has_key?(:response_to))
 			@post.parent_id = params[:response_to]
 		end
+		if(params.has_key?(:private))
+			@post.private = true
+		end
 		@post.save!
 		render json: @post
 	end
