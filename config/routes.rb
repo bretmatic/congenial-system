@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json } do
   	post "users/login", to: "users#login"
-  	resources :users
+  	resources :users do
+  		resources :posts
+  	end
   	resources :posts
   end
 
