@@ -49,3 +49,5 @@ expected param format: `2025-06-03 16:57:45.608000 -04:00`
 
 ***PROJECT TODO***
 - Basic framework for followers exists via the follow table and Active record associations in Users model, but functionality is incomplete
+
+- Only basic Rails error handling exists. Should add custom error messaging
