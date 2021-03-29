@@ -17,8 +17,7 @@ module Sama
     # the framework and any gems in your application.
 
     # Auto-load API and its subdirectories
-	config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
-	config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+
 
 	# CORS config
 	config.middleware.insert_before 0, Rack::Cors do
