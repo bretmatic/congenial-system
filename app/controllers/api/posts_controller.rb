@@ -1,9 +1,18 @@
-class API::PostsController < ApplicationController
+class API::PostsController < API::BaseController
 
 	def index
+
 		if(params.has_key?(:user_id))
 			@posts = Post.where('user_id = ?', logged_in_user.id)
 		elsif(params.has_key?(:start_date) && params.has_key?(:end_date))
+			# Validate date
+			begin
+				Time.parse(params[:start_date])
+			rescue
+				
+			else
+			end
+
 			@posts = Post.where('created_at > ? AND created_at < ?', Time.parse(params[:start_date]), Time.parse(params[:end_date]))
 		else
 			@posts = Post.all
